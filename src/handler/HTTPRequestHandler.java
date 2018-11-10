@@ -124,12 +124,22 @@ public class HTTPRequestHandler extends TimerTask{
 				            	
 				            }
 				          //out.println("Content-type: text/html");
-				           
+				           rsp = rsp.replace("{fdpath}", "pages"+file);
+				           rsp = rsp.replace("{v}", "v1.0");
+				           String type = "";
+				           File f223 = new File(INIT.pd+file);
+				           if(f223.isDirectory()) {
+				        	   type="Ordner";
+				           }else {
+				        	   type="Datei";
+				           }
+				           rsp.replace("{fstype}", type);
 				            //out.println("Server-name: gommehd");
 				            out.println("Content-length: " + rsp.length());
 				            out.println("");
 				            out.println(rsp);
 				            out.flush();
+				            rsp = "";
 				            
 				    }
 			}

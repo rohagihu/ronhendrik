@@ -91,14 +91,59 @@ public class INIT {
 			
 			not_found.createNewFile();
 			writer1 = new FileWriter(not_found);
-			writer1.write("<html>"
-					+ "<head>"
-					+ "<title>404</title>"
-					+ "</head>"
-					+ "<body>"
-					+ "<h1>404</h1>"
-					+ "</body>"
-					+ "</html>");
+			writer1.write("<html>\r\n" + 
+					"	<head>\r\n" + 
+					"		<!-- FONT IMPORT -->\r\n" + 
+					"		<link href=\"https://fonts.googleapis.com/css?family=Anton\" rel=\"stylesheet\">\r\n" + 
+					"		<link href=\"https://fonts.googleapis.com/css?family=Noto+Sans+JP\" rel=\"stylesheet\">\r\n" + 
+					"		<link href=\"https://fonts.googleapis.com/css?family=Orbitron\" rel=\"stylesheet\">\r\n" + 
+					"		<!-- -->\r\n" + 
+					"		<title>Datei wurde nicht gefunden!</title>\r\n" + 
+					"		<style>\r\n" + 
+					"			body{\r\n" + 
+					"				background-color: #1b1c1e;\r\n" + 
+					"			}\r\n" + 
+					"			.doc_1 {\r\n" + 
+					"				/*margin-left: 300px;*/\r\n" + 
+					"				margin-top: 170px;\r\n" + 
+					"				padding-top: 20px;\r\n" + 
+					"				padding-bottom: 20px;\r\n" + 
+					"				border-radius: 8px;\r\n" + 
+					"				font-family: 'Anton', sans-serif;\r\n" + 
+					"				background-color: #5f6268;\r\n" + 
+					"				width: 700px;\r\n" + 
+					"				color: orange;\r\n" + 
+					"+				\r\n" + 
+					"			}\r\n" + 
+					"			tip {\r\n" + 
+					"				font-family: 'Noto Sans JP', sans-serif;\r\n" + 
+					"				width: 2px;\r\n" + 
+					"				border-radius: 4px;\r\n" + 
+					"				color: black;\r\n" + 
+					"				background-color: white;\r\n" + 
+					"				padding-left: 10px;\r\n" + 
+					"				padding-right: 10px;\r\n" + 
+					"				padding-top: 1px;\r\n" + 
+					"			}\r\n" + 
+					"			h6 {\r\n" + 
+					"				color: aqua;\r\n" + 
+					"				font-family: 'Orbitron', sans-serif;\r\n" + 
+					"			}\r\n" + 
+					"		</style>\r\n" + 
+					"	</head>\r\n" + 
+					"	<body>\r\n" + 
+					"		<center><div class=\"doc_1\">\r\n" + 
+					"			<center>\r\n" + 
+					"				<p>Sorry die Datei oder Ordner : {fdpath}"
+					+ " wurde leider nicht Gefunden!</p>\r\n" + 
+					"			</br>\r\n" + 
+					"				<p>TIPP:<br/>Erstelle die Datei oder Ordner : </p><tip>{fdpath}</tip><br/>\r\n" + 
+					"				<p>Und die Datei ist dann erstellt!</p><br/>\r\n" + 
+					"				<h6>RainbowsOfRainbowPages {v}</h6>\r\n" + 
+					"			</center>\r\n" + 
+					"		</div></center>\r\n" + 
+					"	</body>\r\n" + 
+					"</html>");
 			writer1.flush();
 			LogConsole("404 Datei wurde erstellt       [PATH=/configs/404.html]");
 			}else {
@@ -109,16 +154,50 @@ public class INIT {
 				FileWriter fw = new FileWriter(imgNotaccept);
 				fw.write("<html>\r\n" + 
 						"	<head>\r\n" + 
-						"		<title>\r\n" + 
-						"			ERROR\r\n" + 
-						"		</title>\r\n" + 
+						"		<!-- FONT IMPORT -->\r\n" + 
+						"		<link href=\"https://fonts.googleapis.com/css?family=Anton\" rel=\"stylesheet\">\r\n" + 
+						"		<link href=\"https://fonts.googleapis.com/css?family=Noto+Sans+JP\" rel=\"stylesheet\">\r\n" + 
+						"		<link href=\"https://fonts.googleapis.com/css?family=Orbitron\" rel=\"stylesheet\">\r\n" + 
+						"		<!-- -->\r\n" + 
+						"		<title>Datei wurde nicht gefunden!</title>\r\n" + 
+						"		<style>\r\n" + 
+						"			body{\r\n" + 
+						"				background-color: #1b1c1e;\r\n" + 
+						"			}\r\n" + 
+						"			.doc_1 {\r\n" + 
+						"				margin-left: 300px;\r\n" + 
+						"				margin-top: 170px;\r\n" + 
+						"				padding-top: 20px;\r\n" + 
+						"				padding-bottom: 20px;\r\n" + 
+						"				border-radius: 8px;\r\n" + 
+						"				font-family: 'Anton', sans-serif;\r\n" + 
+						"				background-color: #5f6268;\r\n" + 
+						"				width: 700px;\r\n" + 
+						"				color: orange;\r\n" + 
+						"+				\r\n" + 
+						"			}\r\n" + 
+						"			tip {\r\n" + 
+						"				font-family: 'Noto Sans JP', sans-serif;\r\n" + 
+						"				width: 2px;\r\n" + 
+						"				border-radius: 4px;\r\n" + 
+						"				color: black;\r\n" + 
+						"				background-color: white;\r\n" + 
+						"				padding-left: 10px;\r\n" + 
+						"				padding-right: 10px;\r\n" + 
+						"				padding-top: 1px;\r\n" + 
+						"			}\r\n" + 
+						"			h6 {\r\n" + 
+						"				color: aqua;\r\n" + 
+						"				font-family: 'Orbitron', sans-serif;\r\n" + 
+						"			}\r\n" + 
+						"		</style>\r\n" + 
 						"	</head>\r\n" + 
 						"	<body>\r\n" + 
-						"		<center>\r\n" + 
-						"			<div>\r\n" + 
-						"				<p>Sorry,</br>IMAGES werden nicht akzeptiert da ein crash passieren kann!</p>\r\n" + 
-						"			</div>\r\n" + 
-						"		</center>\r\n" + 
+						"		<div class=\"doc_1\">\r\n" + 
+						"			<center>\r\n" + 
+						"				<img src=\"{fdpath}\">\r\n" + 
+						"			</center>\r\n" + 
+						"		</div>\r\n" + 
 						"	</body>\r\n" + 
 						"</html>");
 				fw.flush();
