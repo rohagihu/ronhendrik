@@ -1,0 +1,5 @@
+{fdpath} = "Datei Pfad"
+{iw}	 = "IMG breite"
+{hw}	 = "IMG höhe"
+{fdtype} = "Ob es ein Datei oder Ordner ist!"
+{v} 	 = "version"
