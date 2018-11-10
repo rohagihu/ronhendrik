@@ -3,3 +3,4 @@
 {hw}	 = "IMG höhe"
 {fdtype} = "Ob es ein Datei oder Ordner ist!"
 {v} 	 = "version"
+{imgp}	 = "IMG Path"

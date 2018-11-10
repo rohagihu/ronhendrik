@@ -96,7 +96,7 @@ public class HTTPRequestHandler extends TimerTask{
 				    		File fg = new File(INIT.pd+file);
 				    		boolean s1s = false;
 				    		if(fg.exists()) {
-				    			if(fg.getName().toLowerCase().contains(".png".toLowerCase())) {
+				    			if(fg.getName().toLowerCase().contains(".png".toLowerCase()) || fg.getName().toLowerCase().contains(".img".toLowerCase()) || fg.getName().toLowerCase().contains(".omg".toLowerCase())) {
 				    				rsp = INIT.imgnotaccept;
 				    			}else {
 				    				final java.util.List<String> rsp2 = Files.readAllLines(fg.toPath());
@@ -118,11 +118,7 @@ public class HTTPRequestHandler extends TimerTask{
 				    	 final BufferedReader in = new BufferedReader(new InputStreamReader(s.getInputStream()));
 				            final PrintWriter out = new PrintWriter(s.getOutputStream(), true);
 				            out.println("HTTP/1.0 200");
-				            if(isImg == true) {
-				            	out.println("Content-type: image/png");
-				            }else {
-				            	
-				            }
+				            
 				          //out.println("Content-type: text/html");
 				           rsp = rsp.replace("{fdpath}", "pages"+file);
 				           rsp = rsp.replace("{v}", "v1.0");
@@ -134,6 +130,8 @@ public class HTTPRequestHandler extends TimerTask{
 				        	   type="Datei";
 				           }
 				           rsp.replace("{fstype}", type);
+				           rsp.replace("{imgp}", INIT.pd2+file);
+				           System.out.println(INIT.pd2+file);
 				            //out.println("Server-name: gommehd");
 				            out.println("Content-length: " + rsp.length());
 				            out.println("");

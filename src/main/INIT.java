@@ -41,6 +41,7 @@ public class INIT {
 	static String mf = "RainbowServer\\";
 	static String cd = "RainbowServer\\configs\\";
 	public static String pd = "RainbowServer\\pages\\";
+	public static String pd2 = "RainbowServer\\pages";
 	//Reader
 	static FileReader freader;
 	static BufferedReader rd;
@@ -165,14 +166,14 @@ public class INIT {
 						"				background-color: #1b1c1e;\r\n" + 
 						"			}\r\n" + 
 						"			.doc_1 {\r\n" + 
-						"				margin-left: 300px;\r\n" + 
+						"				/*margin-left: 300px;*/\r\n" + 
 						"				margin-top: 170px;\r\n" + 
 						"				padding-top: 20px;\r\n" + 
 						"				padding-bottom: 20px;\r\n" + 
 						"				border-radius: 8px;\r\n" + 
 						"				font-family: 'Anton', sans-serif;\r\n" + 
 						"				background-color: #5f6268;\r\n" + 
-						"				width: 700px;\r\n" + 
+						"				width: 200px;\r\n" + 
 						"				color: orange;\r\n" + 
 						"+				\r\n" + 
 						"			}\r\n" + 
@@ -193,11 +194,9 @@ public class INIT {
 						"		</style>\r\n" + 
 						"	</head>\r\n" + 
 						"	<body>\r\n" + 
-						"		<div class=\"doc_1\">\r\n" + 
-						"			<center>\r\n" + 
-						"				<img src=\"{fdpath}\">\r\n" + 
-						"			</center>\r\n" + 
-						"		</div>\r\n" + 
+						"		<center><div class=\"doc_1\">\r\n" + 
+						"			<p>Sorry Blocked!</p>\r\n" + 
+						"		</div></center>\r\n" + 
 						"	</body>\r\n" + 
 						"</html>");
 				fw.flush();
